@@ -1,0 +1,30 @@
+{
+  "name": "@gt3/dom-listeners",
+  "version": "0.0.1",
+  "description": "Register listeners for DOM events",
+  "main": "./dist/listeners.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore src/**",
+    "build:node": "cross-env BABEL_ENV=development babel src/listeners.js -o dist/listeners.js",
+    "build:browser": "cross-env BABEL_ENV=browser babel src/listeners.js -o dist/listeners.min.js",
+    "build": "npm run build:node && npm run build:browser",
+    "prepublish": "npm run build"
+  },
+  "repository": "gt3/dom-listeners",
+  "author": "Ankit Patel <gt3.someday@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gt3/dom-listeners/issues"
+  },
+  "homepage": "https://github.com/gt3/dom-listeners#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-es2015": "^6.18.0",
+    "cross-env": "^3.1.4",
+    "eslint": "^3.2.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
